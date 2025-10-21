@@ -1,13 +1,12 @@
 ---
 icon: fa fa-male
-order: 5
+order: 4
 title: Curriculum Vitae
 ---
 [![CEH Master](/assets/img/ceh_badge.png){: width="120" .w-75 .normal}](https://aspen.eccouncil.org/VerifyBadge?type=certification&a=HeAEcr5oD00Qx7bRkv/3g//RZ4AK33dW8Cq3oeejSks=)
 [![CRTA](/assets/img/crta_badge.png){: width="120" .w-75 .normal}](https://www.credential.net/0845e59b-2887-41c8-9f01-8169d24ef053#acc.BQcb9Cof)
 
 ## [About Me](/about)
-{: data-toc-skip='' .mt-4 .mb-0 }
 
 ## **Experience**
 #### **Senior Ethical Hacker** @ Cipher  
