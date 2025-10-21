@@ -65,7 +65,7 @@ Smaller, heavily quantized models are fast but may lose depth or nuance. Larger 
 
 I highly recommend browsing [Ollama model list](https://ollama.com/search) and look for a model that suits you. 
 Here's a quickstart example:
-![LLM model example](assets/img/posts/personal_hacking_ai/llm_example.png)
+![LLM model example](/assets/img/posts/personal_hacking_ai/llm_example.png)
 _LLM model example_
 - **Model family**: In this case, 3rd generation of Google's Gemma LLM family.
 - **Parameter size**: The model has approx. 4 billion parameters (compact).
