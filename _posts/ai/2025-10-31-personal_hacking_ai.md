@@ -1,6 +1,6 @@
 ---
 title: Create your own private AI for hacking
-date: 2025-10-20 12:00:00 +0200
+date: 2025-10-21 18:30:00 +0200
 categories: [AI, Tutorial]
 tags: [artificial intelligence]
 author: diego
@@ -205,6 +205,13 @@ So that's it. I have tried to explain (a bit) why local AIs are relevant, why ev
 Hope you enjoyed it, I tried my best here. If you have any comments or anything, feel free to ping me.
 
 **Chaaaaao chao chao chao**
+
+## People, references and interesting links
+- Big thanks to [Adrián Fernández](https://www.linkedin.com/in/afvelle/) for introducing the team into this!
+- [Ollama model library](https://ollama.com/search)
+- [Open WebUI docs](https://docs.openwebui.com/)
+- [LocalLLM Reddit](https://www.reddit.com/r/LocalLLM/)
+- [NetworkChuck's tutorial](https://www.youtube.com/watch?v=Wjrdr0NU4Sk) for something pretty similar (and better explained)
 
 > Wanna talk? Contact me here!  
 > <a href="javascript:void(0);" style="font-size:1.2rem; margin-right:0.8rem; margin-top:1rem;" onclick="navigator.clipboard.writeText('diegofdlg@gmail.com');alert('Mail copied to the clipboard!')"><i class="fa-solid fa-envelope"></i></a>
