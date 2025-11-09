@@ -36,7 +36,7 @@ Running Ollama inside Docker adds another layer of flexibility and isolation tha
 Before diving into building our humanoid, there are a few core concepts we need to understand:
 - **Context (window)**: Amount of information the model can "remember" at once. Everything you write in a conversation is turned into tokens (I will explain hold on), and the model can only reason over a fixed number of these.
 The bigger the context, the better long-term reasoning. 
-- **Tokens**: These are the basic units of text that the model processess. The model doesn't read sentences, it reads token sequences and predicts the following.
+- **Tokens**: These are the basic units of text that the model processes. The model doesn't read sentences, it reads token sequences and predicts the following.
 For example: `Hacking` becomes `hack` + `ing`.
 - **Parameters**: Parameters are the weights inside the neural network that the model learned during its training. They define how the model makes decisions. Usually, more parameters = more capability but also more VRAM consumption and thus slower.
 - **Quantization**: Process of compressing a model so it uses fewer bits to represent its weights, you are going to see it like 16-bit, 8-bit, 4-bit.
@@ -135,7 +135,7 @@ If you hit any obstacles, here are the [official docs](https://docs.openwebui.co
 Pulling models is simple and (depending on your Internet speed) usually quick. Open the `Exec` console in Docker and run `ollama pull <model_name>`.
 For example, if you wanted to try `qwen3:4b-q4_K_M`, you would just do `ollama pull qwen3:4b-q4_K_M`: 
 ![ollama pull](/assets/img/posts/personal_hacking_ai/docker_ollama_pull.png)
-And then you could go ahead and use it running `ollama run qwen3:4b-q4_K_M`. Then you can start chating:
+And then you could go ahead and use it running `ollama run qwen3:4b-q4_K_M`. Then you can start chatting:
 ![ollama run](/assets/img/posts/personal_hacking_ai/docker_ollama_run.png)
 
 If you want to use a model that is not available on Ollama but on [Hugging Face](https://huggingface.co/), you can do it as long as the use option is present. For example:
