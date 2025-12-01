@@ -29,6 +29,24 @@ Check all my certifications in my [Accredible wallet](https://www.credential.net
 - Deployed, managed, and executed automated pentesting processes using Pentera, ensuring thorough security assessments.
 - Prepared comprehensive reports detailing findings, risks, and security recommendations, tailored for both technical and non-technical stakeholders.
 
+#### **IT Auditor** @ Cipher  
+{: data-toc-skip='' .mt-4 .mb-0 }
+**09/2022 - 05/2023**  
+**Remote**
+- Developed IT and OT system auditing frameworks based on widely recognized standards and regulations.
+- Provided consulting services for the enhancement of network architecture and securing communications.
+- Conducted risk assessments and contributed to risk management strategies to mitigate cybersecurity threats.
+- Led continuous improvement initiatives for internal management systems, optimizing processes and security measures.
+
+#### **IT Risk Consultant** @ PwC  
+{: data-toc-skip='' .mt-4 .mb-0 }
+**03/2022 - 07/2022**  
+**Madrid**
+- Provided consulting services related to cybersecurity for various clients across different industries.
+- Conducted audits to ensure compliance with cybersecurity regulations in the banking sector.
+- Developed frameworks for banking regulations and fraud control, focusing on cybersecurity measures.
+- Supported the implementation of best practices in cybersecurity to enhance overall security posture.
+
 ## **Education**
 #### Cybersecurity master's degree
 {: data-toc-skip='' .mt-4 .mb-0 }
@@ -41,6 +59,7 @@ Check all my certifications in my [Accredible wallet](https://www.credential.net
 ### **Certifications**
 {: data-toc-skip='' .mt-4 .mb-0 }
 #### Certified Red Team Professional (CRTP)
+{: data-toc-skip='' .mt-4 .mb-0 }
 **Altered Security**
 #### Certified Ethical Hacker Master
 {: data-toc-skip='' .mt-4 .mb-0 }
@@ -61,7 +80,7 @@ Check all my certifications in my [Accredible wallet](https://www.credential.net
 ## **Languages**
 - **Spanish** ⭐️⭐️⭐️⭐️⭐️  
 Native
-- **English** ⭐️⭐️⭐️⭐️☆  
+- **English** ⭐️⭐️⭐️⭐️⭐️   
 Advanced professional
 - **French** ⭐️⭐️⭐️☆☆  
 Basic professional
