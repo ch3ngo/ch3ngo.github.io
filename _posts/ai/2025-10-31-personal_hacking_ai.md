@@ -1,7 +1,7 @@
 ---
 title: Create your own private AI for hacking
 date: 2025-10-21 18:30:00 +0200
-categories: [AI, Tutorial]
+categories: [Tutorial, AI]
 tags: [artificial intelligence]
 author: diego
 description: How I created and configured my own local AI for ethical hacking without risking data collection

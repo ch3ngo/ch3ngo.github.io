@@ -1,10 +1,13 @@
 ---
 title: Certified Red Team Professional (CRTP) review
 date: 2025-11-07 18:30:00 +0200
-categories: [Certification, Opinion]
-tags: [training]
+categories: [Certification, Active Directory]
+tags: [training, opinion, active directory]
 author: diego
 description: How I got CRTP certified. Information, my experience and some (I hope) useful tips.
+image:
+  path: /assets/img/posts/crtp/crtp.png
+  alt: CRTP Certificate
 ---
 
 If you are thinking about taking the [Certified Red Team Professional (CRTP) from Altered Security](https://www.alteredsecurity.com/adlab) challenge, this can interest you.
