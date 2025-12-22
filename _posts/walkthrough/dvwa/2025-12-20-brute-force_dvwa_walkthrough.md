@@ -4,7 +4,7 @@ date: 2025-12-20 13:00:18 +0200
 categories: [Walkthrough, DVWA]
 tags: [walkthrough, dvwa, burpsuite, brute force]
 author: diego
-description: A walkthrough of the Damn Vulnerable Web Application (DVWA) module PART, TITLE.
+description: A walkthrough of the Damn Vulnerable Web Application (DVWA) module 1, Brute Force.
 image:
   path: /assets/img/posts/dvwa/dvwa.png
   alt: DVWA
