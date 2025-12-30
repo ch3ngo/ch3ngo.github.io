@@ -25,9 +25,9 @@ Cheatsheet of the operators that can be used and what each does:
 - `&`: Runs a command in the background and, as a side effect, it states the end of the first command and the second one.
 - `&&`: Executes the second command **only if the first one succeeds**.
 - `|`: The output of the first command is the input to the second one.
-- `||`: Executes the second command only if the first one fails.
+- `||`: Executes the second command **only if the first one fails**.
 - `;`: Separates two commands and allows them to run like they were on two lines.
-- `: Every command inside backticks is evaluated before the external one.
+- \`: Every command inside backticks is evaluated before the external one. Similar to `$()`.
 
 ## **Security: Low**
 > **Help**  
