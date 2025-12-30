@@ -1,6 +1,6 @@
 ---
 title: AI Red Teamer by HackTheBox review
-date: 2025-12-28 20:00:00 +0200
+date: 2025-12-30 14:15:00 +0200
 categories: [Certification, AI]
 tags: [training, opinion, ai, htb]
 author: diego
@@ -472,8 +472,6 @@ Overall, this module is a strong conclusion to the path. It helps you understand
 - Think of this module as a way to consolidate offensive skills with defensive knowledge
 
 ## **My Path Experience**
-
-### My Path Experience
 
 Going through the **AI Red Teamer Job Role Path** was, overall, a very positive and eye opening experience. It is not a perfect path, and it is definitely not an easy one, but in terms of value for money and breadth of coverage, it is the best structured resource I have found so far for learning AI red teaming in a practical and realistic way.
 
