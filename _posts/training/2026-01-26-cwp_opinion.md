@@ -1,6 +1,6 @@
 ---
 title: Certified WiFiChallenge Professional (CWP) review
-date: 2026-01-25 10:30:00 +0200
+date: 2026-01-26 19:15:00 +0200
 categories: [Certification, Wi-Fi]
 tags: [training, opinion, wi-fi]
 author: diego
