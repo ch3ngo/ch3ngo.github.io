@@ -5,15 +5,21 @@ title: Curriculum Vitae
 ---
 [![CEH Master](/assets/img/ceh_badge.png){: width="120" .w-75 .normal}](https://aspen.eccouncil.org/VerifyBadge?type=certification&a=HeAEcr5oD00Qx7bRkv/3g//RZ4AK33dW8Cq3oeejSks=)
 [![CRTA](/assets/img/crta_badge.png){: width="120" .w-75 .normal}](https://www.credential.net/0845e59b-2887-41c8-9f01-8169d24ef053#acc.BQcb9Cof)
+[![CWP](/assets/img/cwp_badge.png){: width="120" .w-75 .normal}](https://www.credential.net/62bb1365-d2d0-4a4b-9527-72c756c17982#acc.JQloy8eX)
 
 Check all my certifications in my [Accredible wallet](https://www.credential.net/profile/ch3ngo/wallet)!
 
 ## [About Me](/about)
 
 ## **Experience**
+#### **Senior Cybersecurity Consultant | Pentester** @ Áudea  
+{: data-toc-skip='' .mt-4 .mb-0 }
+**01/2026 - Present**  
+**Remote**
+
 #### **Senior Ethical Hacker** @ Cipher  
 {: data-toc-skip='' .mt-4 .mb-0 }
-**09/2024 - Present**  
+**09/2024 - 01/2026**  
 **Remote**
 - Conducted advanced security assessments and Red Team exercises in complexcorporate environments, including Active Directory, web applications, and internal networks, demonstrating increased autonomy and technical depth in each engagement.
 - Designed and implemented customized security strategies, leveraging ethical hacking techniques and industry-standard methodologies (e.g., OWASP, MITREATT&CK) to identify, exploit, and mitigate critical vulnerabilities, effectively strengthening clients’ security posture.
@@ -56,8 +62,12 @@ Check all my certifications in my [Accredible wallet](https://www.credential.net
 {: data-toc-skip='' .mt-4 .mb-0 }
 **Universidad de Salamanca**
 **09/2017 - 09/2021**
+
 ### **Certifications**
 {: data-toc-skip='' .mt-4 .mb-0 }
+#### Certified WiFiChallenge Professional (CWP)
+{: data-toc-skip='' .mt-4 .mb-0 }
+**WiFiChallenge Academy**
 #### Certified Red Team Professional (CRTP)
 {: data-toc-skip='' .mt-4 .mb-0 }
 **Altered Security**
