@@ -16,13 +16,18 @@ Check all my certifications in my [Accredible wallet](https://www.credential.net
 {: data-toc-skip='' .mt-4 .mb-0 }
 **01/2026 - Present**  
 **Remote**
+- Perform security assessments for multiple clients across web applications, cloud environments, internal and external infrastructure, Active Directory, and EDR solutions on different operating systems.
+- Manage the full lifecycle of offensive security testing for a global client with more than 10 entities across different locations, including scoping, effort estimation, testing, reporting, and presentation of results.
+- Carry out penetration tests and security reviews using widely adopted tools and methodologies, adapting the approach to each environment and engagement.
+- Test the effectiveness of EDR solutions against different attack techniques and identify areas where detection and response capabilities can be improved.
+- Present findings and recommendations in a clear and practical way, helping clients understand the risks and prioritize remediation actions.
 
 #### **Senior Ethical Hacker** @ Cipher  
 {: data-toc-skip='' .mt-4 .mb-0 }
 **09/2024 - 01/2026**  
 **Remote**
-- Conducted advanced security assessments and Red Team exercises in complexcorporate environments, including Active Directory, web applications, and internal networks, demonstrating increased autonomy and technical depth in each engagement.
-- Designed and implemented customized security strategies, leveraging ethical hacking techniques and industry-standard methodologies (e.g., OWASP, MITREATT&CK) to identify, exploit, and mitigate critical vulnerabilities, effectively strengthening clients’ security posture.
+- Conducted advanced security assessments and Red Team exercises in complex corporate environments, including Active Directory, web applications, and internal networks, demonstrating increased autonomy and technical depth in each engagement.
+- Designed and implemented customized security strategies, leveraging ethical hacking techniques and industry-standard methodologies (e.g., OWASP, MITRE ATT&CK) to identify, exploit, and mitigate critical vulnerabilities, effectively strengthening clients’ security posture.
 - Collaborated closely with presales and consulting teams to develop and present tailored cybersecurity solutions aligned with each client’s unique requirements and risk profile.
 - Led and coordinated multidisciplinary teams, managing project timelines, task allocation, and performance oversight to ensure the timely delivery of high-quality pentesting and Red Team services.
 
@@ -30,8 +35,8 @@ Check all my certifications in my [Accredible wallet](https://www.credential.net
 {: data-toc-skip='' .mt-4 .mb-0 }
 **05/2023 - 09/2024**  
 **Remote**
-- Conducted audits and penetration tests on infrastructures, web and mobile applications, networks, and Active Directory environments to identify and mitigatesecurity vulnerabilities.
-- Executed penetration tests on both external and internal assets, identifying criticalrisks and suggesting mitigation measures.
+- Conducted audits and penetration tests on infrastructures, web and mobile applications, networks, and Active Directory environments to identify and mitigate security vulnerabilities.
+- Executed penetration tests on both external and internal assets, identifying critical risks and suggesting mitigation measures.
 - Deployed, managed, and executed automated pentesting processes using Pentera, ensuring thorough security assessments.
 - Prepared comprehensive reports detailing findings, risks, and security recommendations, tailored for both technical and non-technical stakeholders.
 
@@ -65,6 +70,9 @@ Check all my certifications in my [Accredible wallet](https://www.credential.net
 
 ### **Certifications**
 {: data-toc-skip='' .mt-4 .mb-0 }
+#### Certified Azure Red Team Professional (CARTP)
+{: data-toc-skip='' .mt-4 .mb-0 }
+**Altered Security**
 #### Certified WiFiChallenge Professional (CWP)
 {: data-toc-skip='' .mt-4 .mb-0 }
 **WiFiChallenge Academy**
