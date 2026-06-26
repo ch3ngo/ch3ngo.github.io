@@ -66,47 +66,6 @@ The labs run in your browser, intercepted through Burp Suite. If you have not se
 > This is a Work In Progress, if you are looking for something that should be here it should be in process. You can always ping me and ask!
 {: .prompt-info }
 
-### Authentication Vulnerabilities
-Username enumeration, brute-force protection bypasses, 2FA flaws, password reset logic errors, and stay-logged-in cookie abuse.
-
-1. [Username enumeration via different responses](/posts/portswigger-auth-username-enum-different-responses)
-2. [Username enumeration via subtly different responses](/posts/portswigger-auth-username-enum-subtly-different-responses)
-3. [Username enumeration via response timing](/posts/portswigger-auth-username-enum-response-timing)
-4. [Broken brute-force protection, IP block](/posts/portswigger-auth-broken-brute-force-ip-block)
-5. [Username enumeration via account lockout](/posts/portswigger-auth-username-enum-account-lockout)
-6. [2FA simple bypass](/posts/portswigger-auth-2fa-simple-bypass)
-7. [2FA broken logic](/posts/portswigger-auth-2fa-broken-logic)
-8. [Brute-forcing a stay-logged-in cookie](/posts/portswigger-auth-brute-forcing-stay-logged-in-cookie)
-9. [Offline password cracking](/posts/portswigger-auth-offline-password-cracking)
-10. [Password reset broken logic](/posts/portswigger-auth-password-reset-broken-logic)
-11. [Password reset poisoning via middleware](/posts/portswigger-auth-password-reset-poisoning-via-middleware)
-12. [Password brute-force via password change](/posts/portswigger-auth-password-brute-force-via-password-change)
-
-### Path Traversal
-Reading arbitrary files on the server by manipulating file path parameters, and bypassing common defenses like sequence stripping and extension validation.
-
-1. [File path traversal, simple case](/posts/portswigger-path-traversal-simple-case)
-2. [File path traversal, sequences blocked with absolute path bypass](/posts/portswigger-path-traversal-sequences-blocked-absolute-path-bypass)
-3. [File path traversal, sequences stripped non-recursively](/posts/portswigger-path-traversal-sequences-stripped-non-recursively)
-4. [File path traversal, sequences stripped with superfluous URL-decode](/posts/portswigger-path-traversal-sequences-stripped-superfluous-url)
-5. [File path traversal, validation of start of path](/posts/portswigger-path-traversal-validation-start-path)
-6. [File path traversal, validation of file extension with null byte bypass](/posts/portswigger-path-traversal-validation-file-extension-null-byte-bypass)
-
-### Server-Side Request Forgery (SSRF)
-Forcing the server to make requests to internal or external systems, bypassing access controls and exposing internal infrastructure.
-
-1. [Basic SSRF against the local server](/posts/portswigger-ssrf-basic-against-local-server)
-2. [Basic SSRF against another back-end system](/posts/portswigger-ssrf-basic-against-backend-system)
-3. [SSRF with blacklist-based input filter](/posts/portswigger-ssrf-blacklist-input-filter)
-4. [SSRF with filter bypass via open redirection](/posts/portswigger-ssrf-bypass-open-redirection)
-5. [Blind SSRF with out-of-band detection](/posts/portswigger-ssrf-blind-outofband-detection)
-
-### Cross-Origin Resource Sharing (CORS)
-Misconfigured CORS policies that allow untrusted origins to read sensitive cross-domain responses.
-
-> Coming soon.
-{: .prompt-info }
-
 ---
 
 ## References
