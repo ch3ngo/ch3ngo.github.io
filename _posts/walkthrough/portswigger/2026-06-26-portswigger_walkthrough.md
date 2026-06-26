@@ -1,5 +1,5 @@
 ---
-title: DVWA Complete Walkthrough
+title: PortSwigger Academy Labs Walkthrough
 date: 2026-06-26 22:30:00 +0200
 categories: [Walkthrough, PortSwigger]
 tags: [walkthrough, portswigger, bscp]
