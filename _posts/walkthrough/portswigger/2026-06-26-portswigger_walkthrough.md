@@ -1,6 +1,6 @@
 ---
 title: PortSwigger Academy Labs Walkthrough
-date: 2026-06-26 22:30:00 +0200
+date: 2026-06-28 14:00:00 +0200
 categories: [Walkthrough, PortSwigger]
 tags: [walkthrough, portswigger, bscp]
 author: diego
@@ -64,6 +64,45 @@ The labs run in your browser, intercepted through Burp Suite. If you have not se
 ## **Labs Walkthrough**
 
 > This is a Work In Progress, if you are looking for something that should be here it should be in process. You can always ping me and ask!
+{: .prompt-info }
+
+### Authentication Vulnerabilities
+Username enumeration, brute-force protection bypasses, 2FA flaws, password reset logic errors, and stay-logged-in cookie abuse.
+
+1. [Username enumeration via different responses](/posts/username-enum-different-responses)
+2. [Username enumeration via subtly different responses](/posts/username-enum-subtly-different-responses)
+3. [Username enumeration via response timing](/posts/username-enum-response-timing)
+4. [Broken brute-force protection, IP block](/posts/broken-brute-force-ip-block)
+5. [Username enumeration via account lockout](/posts/username-enum-account-lockout)
+6. [2FA simple bypass](/posts/2fa-simple-bypass)
+7. [2FA broken logic](/posts/2fa-broken-logic)
+8. [Brute-forcing a stay-logged-in cookie](/posts/brute-forcing-stay-logged-in-cookie)
+9. [Offline password cracking](/posts/offline-password-cracking)
+10. [Password reset broken logic](/posts/password-reset-broken-logic)
+11. [Password reset poisoning via middleware](/posts/password-reset-poisoning-via-middleware)
+12. [Password brute-force via password change](/posts/password-brute-force-via-password-change)
+
+### Path Traversal
+Reading arbitrary files on the server by manipulating file path parameters, and bypassing common defenses like sequence stripping and extension validation.
+
+1. [File path traversal, simple case](/posts/path-traversal-simple-case)
+2. [File path traversal, sequences blocked with absolute path bypass](/posts/path-traversal-sequences-blocked-absolute-path-bypass)
+3. [File path traversal, sequences stripped non-recursively](/posts/
+4. path-traversal-sequences-stripped-non-recursively)
+5. [File path traversal, sequences stripped with superfluous URL-decode](/posts/path-traversal-sequences-stripped-superfluous-url)
+6. [File path traversal, validation of start of path](/posts/path-traversal-validation-start-path)
+7. [File path traversal, validation of file extension with null byte bypass](/posts/path-traversal-validation-file-extension-null-byte-bypass)
+
+### Server-Side Request Forgery (SSRF)
+Forcing the server to make requests to internal or external systems, bypassing access controls and exposing internal infrastructure.
+
+> Coming soon.
+{: .prompt-info }
+
+### Cross-Origin Resource Sharing (CORS)
+Misconfigured CORS policies that allow untrusted origins to read sensitive cross-domain responses.
+
+> Coming soon.
 {: .prompt-info }
 
 ---
