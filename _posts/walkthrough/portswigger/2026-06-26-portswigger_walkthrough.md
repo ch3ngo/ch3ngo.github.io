@@ -87,11 +87,16 @@ Reading arbitrary files on the server by manipulating file path parameters, and 
 
 1. [File path traversal, simple case](/posts/path-traversal-simple-case)
 2. [File path traversal, sequences blocked with absolute path bypass](/posts/path-traversal-sequences-blocked-absolute-path-bypass)
-3. [File path traversal, sequences stripped non-recursively](/posts/
-4. path-traversal-sequences-stripped-non-recursively)
+3. [File path traversal, sequences stripped non-recursively](/posts/path-traversal-sequences-stripped-non-recursively)
 5. [File path traversal, sequences stripped with superfluous URL-decode](/posts/path-traversal-sequences-stripped-superfluous-url)
 6. [File path traversal, validation of start of path](/posts/path-traversal-validation-start-path)
 7. [File path traversal, validation of file extension with null byte bypass](/posts/path-traversal-validation-file-extension-null-byte-bypass)
+
+### Server-Side Request Forgery (SSRF)
+Forcing the server to make requests to internal or external systems, bypassing access controls and exposing internal infrastructure.
+
+> Coming soon.
+{: .prompt-info }
 
 ### Server-Side Request Forgery (SSRF)
 Forcing the server to make requests to internal or external systems, bypassing access controls and exposing internal infrastructure.
