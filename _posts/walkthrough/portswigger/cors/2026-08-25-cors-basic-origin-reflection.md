@@ -55,7 +55,6 @@ Confirmed: any origin is trusted, and credentials are allowed. Time to weaponize
 Deliver it to the victim, then check the access log. The administrator's session hit our page, the request fired with their cookies attached thanks to `withCredentials`, and their account details (API key included) landed in our log. Grab the `apikey` value and submit it. Lab solved.
 
 ![Lab solved confirmation](/assets/img/posts/portswigger/cors/02-lab-solved.png)
-![alt text](image.png)
 
 Textbook example of why blindly reflecting `Origin` is basically the same as setting `Access-Control-Allow-Origin: *`, except worse, because it lets credentials through too.
 

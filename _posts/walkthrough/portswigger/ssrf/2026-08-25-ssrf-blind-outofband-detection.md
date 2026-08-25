@@ -38,7 +38,6 @@ Referer: http://<your-subdomain>.oastify.com
 Send it, then check the Collaborator client for interactions. Sure enough, an HTTP request rolls in from the lab's server, confirming it fetched our URL server-side.
 
 ![Collaborator interaction confirming the out-of-band SSRF](/assets/img/posts/portswigger/ssrf/07-lab-solved.png)
-![alt text](image.png)
 
 That interaction is the whole proof. No data comes back in the response, we can't read anything from it directly here, but we've confirmed the server-side request happens, which in a real engagement would be the starting point for internal network probing or chaining into something with actual impact. Lab solved.
 
