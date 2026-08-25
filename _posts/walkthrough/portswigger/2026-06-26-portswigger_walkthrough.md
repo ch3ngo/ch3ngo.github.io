@@ -1,6 +1,6 @@
 ---
 title: PortSwigger Academy Labs Walkthrough
-date: 2026-06-28 14:00:00 +0200
+date: 2026-08-25 20:00:01 +0200
 categories: [Walkthrough, PortSwigger]
 tags: [walkthrough, portswigger, bscp]
 author: diego
@@ -95,17 +95,28 @@ Reading arbitrary files on the server by manipulating file path parameters, and 
 ### Server-Side Request Forgery (SSRF)
 Forcing the server to make requests to internal or external systems, bypassing access controls and exposing internal infrastructure.
 
-> Coming soon.
-{: .prompt-info }
-
-### Server-Side Request Forgery (SSRF)
-Forcing the server to make requests to internal or external systems, bypassing access controls and exposing internal infrastructure.
-
-> Coming soon.
-{: .prompt-info }
+1. [Basic SSRF against the local server](/posts/ssrf-basic-against-local-server)
+2. [Basic SSRF against another back-end system](/posts/ssrf-basic-against-backend-system)
+3. [SSRF with blacklist-based input filter](/posts/ssrf-blacklist-input-filter)
+4. [SSRF with filter bypass via open redirection](/posts/ssrf-bypass-open-redirection)
+5. [Blind SSRF with out-of-band detection](/posts/ssrf-blind-outofband-detection)
 
 ### Cross-Origin Resource Sharing (CORS)
 Misconfigured CORS policies that allow untrusted origins to read sensitive cross-domain responses.
+
+1. [CORS vulnerability with basic origin reflection](/posts/cors-basic-origin-reflection)
+2. [CORS vulnerability with trusted null origin](/posts/cors-trusted-null-origin)
+3. [CORS vulnerability with trusted insecure protocols](/posts/cors-trusted-insecure-protocols)
+
+### WebSockets
+Manipulating WebSocket messages and handshakes, and hijacking connections cross-site to abuse authenticated sessions.
+
+1. [Manipulating WebSocket messages to exploit vulnerabilities](/posts/websockets-manipulating-messages)
+2. [Manipulating the WebSocket handshake to exploit vulnerabilities](/posts/websockets-manipulating-handshake)
+3. [Cross-site WebSocket hijacking](/posts/websockets-cross-site-websocket-hijacking)
+
+### Web LLM Attacks
+Abusing excessive agency and chaining classic web vulnerabilities through APIs exposed to an LLM.
 
 > Coming soon.
 {: .prompt-info }
