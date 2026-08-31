@@ -1,10 +1,10 @@
 ---
-title: PortSwigger Walkthrough - Username enumeration via account lockout
+title: PortSwigger Walkthrough - Username enumeration via account lock
 date: 2026-06-28 13:30:00 +0200
 categories: [Walkthrough, PortSwigger]
 tags: [walkthrough, portswigger, bscp, authentication, user enumeration]
 author: diego
-description: Walkthrough of PortSwigger's 'Username enumeration via account lockout' lab.
+description: Walkthrough of PortSwigger's 'Username enumeration via account lock' lab.
 image:
   path: /assets/img/posts/portswigger/portswigger.png
   alt: PortSwigger Web Security Academy
@@ -23,7 +23,7 @@ Account lockout is supposed to protect against brute-force attacks by locking th
 ## Objective
 Enumerate a valid username by exploiting the account lockout logic, brute-force the password, and log in.
 
-> [PortSwigger's lab link](https://portswigger.net/web-security/authentication/password-based/lab-username-enumeration-via-account-lockout)
+> [PortSwigger's lab link](https://portswigger.net/web-security/authentication/password-based/lab-username-enumeration-via-account-lock)
 {: .prompt-info }
 
 ## Walkthrough

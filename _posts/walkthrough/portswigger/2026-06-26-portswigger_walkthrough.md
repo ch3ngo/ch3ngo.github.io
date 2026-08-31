@@ -1,6 +1,6 @@
 ---
 title: PortSwigger Academy Labs Walkthrough
-date: 2026-08-25 20:00:01 +0200
+date: 2026-08-31 10:30:01 +0200
 categories: [Walkthrough, PortSwigger]
 tags: [walkthrough, portswigger, bscp]
 author: diego
@@ -10,7 +10,7 @@ image:
   alt: PortSwigger Web Security Academy
 ---
 
-> To browse all labs in this series, visit the [full PortSwigger series](/categories/dvwa/).
+> To browse all labs in this series, visit the [full PortSwigger series](/categories/portswigger/).
 {: .prompt-info }
 
 > All testing shown in this series is performed against PortSwigger Academy's intentionally vulnerable labs.  
@@ -73,7 +73,7 @@ Username enumeration, brute-force protection bypasses, 2FA flaws, password reset
 2. [Username enumeration via subtly different responses](/posts/username-enum-subtly-different-responses)
 3. [Username enumeration via response timing](/posts/username-enum-response-timing)
 4. [Broken brute-force protection, IP block](/posts/broken-brute-force-ip-block)
-5. [Username enumeration via account lockout](/posts/username-enum-account-lockout)
+5. [Username enumeration via account lock](/posts/username-enum-account-lock)
 6. [2FA simple bypass](/posts/2fa-simple-bypass)
 7. [2FA broken logic](/posts/2fa-broken-logic)
 8. [Brute-forcing a stay-logged-in cookie](/posts/brute-forcing-stay-logged-in-cookie)
@@ -86,9 +86,9 @@ Username enumeration, brute-force protection bypasses, 2FA flaws, password reset
 Reading arbitrary files on the server by manipulating file path parameters, and bypassing common defenses like sequence stripping and extension validation.
 
 1. [File path traversal, simple case](/posts/path-traversal-simple-case)
-2. [File path traversal, sequences blocked with absolute path bypass](/posts/path-traversal-sequences-blocked-absolute-path-bypass)
-3. [File path traversal, sequences stripped non-recursively](/posts/path-traversal-sequences-stripped-non-recursively)
-4. [File path traversal, sequences stripped with superfluous URL-decode](/posts/path-traversal-sequences-stripped-superfluous-url)
+2. [File path traversal, traversal sequences blocked with absolute path bypass](/posts/path-traversal-sequences-blocked-absolute-path-bypass)
+3. [File path traversal, traversal sequences stripped non-recursively](/posts/path-traversal-sequences-stripped-non-recursively)
+4. [File path traversal, traversal sequences stripped with superfluous URL-decode](/posts/path-traversal-sequences-stripped-superfluous-url)
 5. [File path traversal, validation of start of path](/posts/path-traversal-validation-start-path)
 6. [File path traversal, validation of file extension with null byte bypass](/posts/path-traversal-validation-file-extension-null-byte-bypass)
 
@@ -98,7 +98,7 @@ Forcing the server to make requests to internal or external systems, bypassing a
 1. [Basic SSRF against the local server](/posts/ssrf-basic-against-local-server)
 2. [Basic SSRF against another back-end system](/posts/ssrf-basic-against-backend-system)
 3. [SSRF with blacklist-based input filter](/posts/ssrf-blacklist-input-filter)
-4. [SSRF with filter bypass via open redirection](/posts/ssrf-bypass-open-redirection)
+4. [SSRF with filter bypass via open redirection vulnerability](/posts/ssrf-bypass-open-redirection)
 5. [Blind SSRF with out-of-band detection](/posts/ssrf-blind-outofband-detection)
 
 ### Cross-Origin Resource Sharing (CORS)
@@ -118,8 +118,13 @@ Manipulating WebSocket messages and handshakes, and hijacking connections cross-
 ### Web LLM Attacks
 Abusing excessive agency and chaining classic web vulnerabilities through APIs exposed to an LLM.
 
-> Coming soon.
-{: .prompt-info }
+1. [Exploiting LLM APIs with excessive agency](/posts/web-llm-apis-excessive-agency)
+2. [Exploiting vulnerabilities in LLM APIs](/posts/web-llm-exploiting-vulns-llm-apis)
+3. [Indirect prompt injection](/posts/web-llm-indirect-prompt-injection)
+4. [Exploiting AI agents to perform destructive actions](/posts/web-llm-ai-agents-destructive-actions)
+5. [Exploiting AI agents to exfiltrate sensitive information](/posts/web-llm-ai-agents-exfiltrate-info)
+6. [Exploiting AI agents to trigger secondary vulnerabilities](/posts/web-llm-ai-agents-trigger-secondary-vulns)
+7. [Bypassing AI scanner defenses to exfiltrate sensitive information](/posts/web-llm-bypassing-ai-scanner-defenses)
 
 ---
 

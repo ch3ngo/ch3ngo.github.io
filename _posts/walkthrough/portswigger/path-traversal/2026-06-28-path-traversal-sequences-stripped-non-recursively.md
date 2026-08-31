@@ -1,10 +1,10 @@
 ---
-title: PortSwigger Walkthrough - File path traversal, sequences stripped non-recursively
+title: PortSwigger Walkthrough - File path traversal, traversal sequences stripped non-recursively
 date: 2026-06-28 13:30:00 +0200
 categories: [Walkthrough, PortSwigger]
 tags: [walkthrough, portswigger, bscp, path traversal]
 author: diego
-description: Walkthrough of PortSwigger's 'File path traversal, sequences stripped non-recursively' lab.
+description: Walkthrough of PortSwigger's 'File path traversal, traversal sequences stripped non-recursively' lab.
 image:
   path: /assets/img/posts/portswigger/portswigger.png
   alt: PortSwigger Web Security Academy
