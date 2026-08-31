@@ -17,10 +17,11 @@ Check all my certifications in my [Accredible wallet](https://www.credential.net
 **01/2026 - Present**  
 **Remote**
 - Perform security assessments for multiple clients across web applications, cloud environments, internal and external infrastructure, Active Directory, and EDR solutions on different operating systems.
-- Manage the full lifecycle of offensive security testing for a global client with more than 10 entities across different locations, including scoping, effort estimation, testing, reporting, and presentation of results.
+- Manage the full lifecycle of offensive security testing for a global client with more than 10 entities across different locations: scoping, effort estimation, testing, reporting, and presenting the results.
 - Carry out penetration tests and security reviews using widely adopted tools and methodologies, adapting the approach to each environment and engagement.
-- Test the effectiveness of EDR solutions against different attack techniques and identify areas where detection and response capabilities can be improved.
-- Present findings and recommendations in a clear and practical way, helping clients understand the risks and prioritize remediation actions.
+- Test the effectiveness of EDR solutions against various attack techniques and flag where detection and response could actually improve.
+- Contribute to a banking client's cyberintelligence/threat monitoring service (built on Recorded Future), producing periodic briefings on threat actor activity, critical vulnerabilities, the ransomware landscape, and geopolitical risk relevant to the client.
+- Present findings and recommendations in a clear, practical way, helping clients understand risk and actually prioritize remediation instead of filing the report away.
 
 #### **Senior Ethical Hacker** @ Cipher  
 {: data-toc-skip='' .mt-4 .mb-0 }
@@ -58,16 +59,6 @@ Check all my certifications in my [Accredible wallet](https://www.credential.net
 - Developed frameworks for banking regulations and fraud control, focusing on cybersecurity measures.
 - Supported the implementation of best practices in cybersecurity to enhance overall security posture.
 
-## **Education**
-#### Cybersecurity master's degree
-{: data-toc-skip='' .mt-4 .mb-0 }
-**Universidad de Alcalá de Henares**
-**10/2021 - 07/2022**
-#### Computer Engineering degree
-{: data-toc-skip='' .mt-4 .mb-0 }
-**Universidad de Salamanca**
-**09/2017 - 09/2021**
-
 ### **Certifications**
 {: data-toc-skip='' .mt-4 .mb-0 }
 #### Certified Azure Red Team Professional (CARTP)
@@ -94,6 +85,57 @@ Check all my certifications in my [Accredible wallet](https://www.credential.net
 #### INE Certified Cloud Associate (ICCA)
 {: data-toc-skip='' .mt-4 .mb-0 }
 **INE**
+#### AI Red Teamer Job Role Path ("AI Ninja")
+{: data-toc-skip='' .mt-4 .mb-0 }
+**HTB Academy** - Not an exam-based vert, but hands-on
+
+## **Technical Skills**
+Only a few, not going to mention all tools
+#### Penetration Testing & Red Team
+{: data-toc-skip='' .mt-4 .mb-0 }
+External/internal pentests, vulnerability assessment, adversary simulation, attack surface analysis, red team operations, MITRE ATT&CK-based campaign design.
+
+#### Active Directory
+{: data-toc-skip='' .mt-4 .mb-0 }
+Enumeration, privilege escalation, lateral movement: BloodHound, Rubeus, Mimikatz, PowerSploit, Impacket, NetExec, Certify.
+
+#### Web & Mobile
+{: data-toc-skip='' .mt-4 .mb-0 }
+OWASP Top 10, Burp Suite, SQLmap, Feroxbuster, MobSF, Frida.
+
+#### Cloud & Kubernetes
+{: data-toc-skip='' .mt-4 .mb-0 }
+Cloud security assessments on Azure and AWS, EDR evasion and detection testing, Kubernetes internals (BadPods, RBAC privilege escalation, container escape, secrets exposure, etcd).
+
+#### Social Engineering & Physical
+{: data-toc-skip='' .mt-4 .mb-0 }
+Phishing campaigns, QRishing, piggybacking and physical access testing, including critical infrastructure environments like airports.
+
+#### C2 Frameworks
+{: data-toc-skip='' .mt-4 .mb-0 }
+Havoc, Empire, Metasploit.
+
+#### AI Red Teaming
+{: data-toc-skip='' .mt-4 .mb-0 }
+Prompt injection, model evasion, data tampering, LLM security evaluation, plus using AI day to day to speed up recon, reporting, and tooling.
+
+#### Scripting
+{: data-toc-skip='' .mt-4 .mb-0 }
+Python, Bash, PowerShell, etc.
+
+#### Tools & Frameworks
+{: data-toc-skip='' .mt-4 .mb-0 }
+Pentera, Horizon3, Nessus, Nmap, Nuclei, TestSSL, MITRE ATT&CK, OWASP, OSSTMM, PTES, TLPT.
+
+## **Education**
+#### Cybersecurity master's degree
+{: data-toc-skip='' .mt-4 .mb-0 }
+**Universidad de Alcalá de Henares**
+**10/2021 - 07/2022**
+#### Computer Engineering degree
+{: data-toc-skip='' .mt-4 .mb-0 }
+**Universidad de Salamanca**
+**09/2017 - 09/2021**
 
 ## **Languages**
 - **Spanish** ⭐️⭐️⭐️⭐️⭐️  
@@ -103,47 +145,9 @@ Advanced professional
 - **French** ⭐️⭐️⭐️☆☆  
 Basic professional
 
-## **Technical Skills**
-Only a few, not going to mention all tools
-#### Pentesting & Red Team
-{: data-toc-skip='' .mt-4 .mb-0 }
-- Metasploit
-- Empire
-- Havoc
-- Cobalt Strike
-- Active Directory and CS Exploitation
-  - BloodHound
-  - PowerSploit
-  - Rubeus
-  - Mimikatz
-  - Certify
-  - Impacket
-  - NetExec
-- Web and mobile applications penetration testing
-  - OWASP
-  - Feroxbuster
-  - SQLmap
-  - Frida
-  - MobSF
-
-#### Tools & Frameworks
-{: data-toc-skip='' .mt-4 .mb-0 }
-- Nessus
-- Nmap
-- Pentera
-- Burp Suite
-- MITRE ATT&CK
-- OSSTMM
-- PTES
-
-#### Scripting
-{: data-toc-skip='' .mt-4 .mb-0 }
-- Bash
-- PowerShell
-- Python
-
 > Wanna talk? Contact me here!  
 > <a href="javascript:void(0);" style="font-size:1.2rem; margin-right:0.8rem; margin-top:1rem;" onclick="navigator.clipboard.writeText('diegofdlg@gmail.com');alert('Mail copied to the clipboard!')"><i class="fa-solid fa-envelope"></i></a>
 > <a href="https://www.linkedin.com/in/diego-fidalgo" style="font-size:1.2rem; margin-right:0.8rem; margin-top:1rem;" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-> <a href="https://x.com/0x_ch3ngo" style="font-size:1.2rem; margin-top:1rem;" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+> <a href="https://x.com/0x_ch3ngo" style="font-size:1.2rem; margin-right:0.8rem; margin-top:1rem;" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+> <a href="https://discord.com/users/149616662537043969" style="font-size:1.2rem; margin-top:1rem;" target="_blank"><i class="fa-brands fa-discord"></i></a>
 {: .prompt-tip }
