@@ -205,7 +205,7 @@ One important real-world takeaway is that many modern, industry-grade LLMs (such
 | Tier II |   Medium   | Offensive |      14       |    8 hours     |
 {: style="margin-left: auto; margin-right: auto; display: table;" }
 
-![Output Overdrive](assets/img/posts/ai_rt_htb/not_yet.png){: w="350px" }
+![Output Overdrive](assets/img/posts/ai_rt_htb/output_overdrive.png){: w="350px" }
 _[Check my Output Overdrive badge here](https://academy.hackthebox.com/achievement/badge/3b82cd0d-bda5-11f0-9254-bea50ffe6cb4)_
 
 #### What's this about?
@@ -243,7 +243,7 @@ One of the most interesting sections covers abuse attacks. This goes beyond pure
 | Tier II |    Hard    | Offensive |      25       |     3 days     |
 {: style="margin-left: auto; margin-right: auto; display: table;" }
 
-![Data Distorter](assets/img/posts/ai_rt_htb/not_yet.png){: w="350px" }
+![Data Distorter](assets/img/posts/ai_rt_htb/data_distorter.png){: w="350px" }
 _[Check my Data Distorter badge here](https://academy.hackthebox.com/achievement/badge/5fd7374e-c2e7-11f0-9254-bea50ffe6cb4)_
 
 #### What's this about?
@@ -277,7 +277,7 @@ Despite the difficulty, the value is clear. Many real world AI models are traine
 | Tier II |   Medium   | Offensive |      14       |    8 hours     |
 {: style="margin-left: auto; margin-right: auto; display: table;" }
 
-![Protocol Breaker](assets/img/posts/ai_rt_htb/not_yet.png){: w="350px" }
+![Protocol Breaker](assets/img/posts/ai_rt_htb/protocol_breaker.png){: w="350px" }
 _[Check my Protocol Breaker badge here](https://academy.hackthebox.com/achievement/badge/5202770b-cc7f-11f0-9254-bea50ffe6cb4)_
 
 #### What's this about?
@@ -310,7 +310,7 @@ Once everything clicks, the payoff is very satisfying. This module delivers real
 | Tier II |   Medium   | Offensive |      12       |    8 hours     |
 {: style="margin-left: auto; margin-right: auto; display: table;" }
 
-![ModelEvader](assets/img/posts/ai_rt_htb/not_yet.png){: w="350px" }
+![ModelEvader](assets/img/posts/ai_rt_htb/modelevader.png){: w="350px" }
 _[Check my ModelEvader badge here](https://academy.hackthebox.com/achievement/badge/38ea3b02-ce16-11f0-9254-bea50ffe6cb4)_
 
 #### What's this about?
@@ -344,7 +344,7 @@ While it requires solid Python skills and patience, the module provides a strong
 | Tier II |    Hard    | General  |      23       |     2 days     |
 {: style="margin-left: auto; margin-right: auto; display: table;" }
 
-![GradientGhost](assets/img/posts/ai_rt_htb/not_yet.png){: w="350px" }
+![GradientGhost](assets/img/posts/ai_rt_htb/gradientghost.png){: w="350px" }
 _[Check my GradientGhost badge here](https://academy.hackthebox.com/achievement/badge/65453c30-d79e-11f0-9254-bea50ffe6cb4)_
 
 #### What's this about?
@@ -378,7 +378,7 @@ For people with a strong background in mathematics and neural networks, this mod
 | Tier II |    Hard    | Offensive |      28       |     3 days     |
 {: style="margin-left: auto; margin-right: auto; display: table;" }
 
-![PixelSniper](assets/img/posts/ai_rt_htb/not_yet.png){: w="350px" }
+![PixelSniper](assets/img/posts/ai_rt_htb/pixelsniper.png){: w="350px" }
 _[Check my PixelSniper badge here](https://academy.hackthebox.com/achievement/badge/b7b7c362-d9f7-11f0-9254-bea50ffe6cb4)_
 
 #### What's this about?
@@ -410,7 +410,7 @@ For someone with a cybersecurity rather than a mathematical background, this mod
 | Tier II |   Medium   | Defensive |      21       |     2 days     |
 {: style="margin-left: auto; margin-right: auto; display: table;" }
 
-![ShadowGuard](assets/img/posts/ai_rt_htb/not_yet.png){: w="350px" }
+![ShadowGuard](assets/img/posts/ai_rt_htb/shadowguard.png){: w="350px" }
 _[Check my ShadowGuard badge here](https://academy.hackthebox.com/achievement/badge/0df755e5-dec0-11f0-9254-bea50ffe6cb4)_
 
 #### What's this about?
@@ -444,7 +444,7 @@ By the time you reach this module, you are already deeply invested in the path, 
 | Tier II |   Medium   | General  |      21       |     2 days     |
 {: style="margin-left: auto; margin-right: auto; display: table;" }
 
-![AI Shield](assets/img/posts/ai_rt_htb/not_yet.png){: w="350px" }
+![AI Shield](assets/img/posts/ai_rt_htb/ai_shield.png){: w="350px" }
 _[Check my AI Shield badge here](https://academy.hackthebox.com/achievement/badge/f1dd6619-e4c5-11f0-9254-bea50ffe6cb4)_
 
 #### What's this about?
