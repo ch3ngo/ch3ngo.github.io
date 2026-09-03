@@ -1,6 +1,6 @@
 ---
 title: AI Red Teamer by HackTheBox review
-date: 2025-12-30 14:15:00 +0200
+date: 2026-09-03 14:15:00 +0200
 categories: [Certification, AI]
 tags: [training, opinion, ai, htb]
 author: diego
@@ -10,12 +10,14 @@ image:
   alt: AI Red Teamer Path HTB
 ---
 
-> **Quick disclaimer**: Some of the badges don't have an illustration yet, so they look like they are locked. Trust me, they are not.
+
+> **Update**: This post was originally written December 2025, before HTB launched the Certified Offensive AI Expert (COAE) certification. I'm now preparing for the COAE exam, using this same path/notes as groundwork. Once I sit it, I'll publish a separate post covering my process, prep approach, and thoughts on the exam itself.
 {: .prompt-warning }
 
 ## **Introduction**
 
 The [AI Red Teamer Path](https://academy.hackthebox.com/path/preview/ai-red-teamer) is, according to Hack The Box, a Job Role Path. It currently has a projected cost of 970 cubes, from which you earn 210 back. These numbers may change over time, as the path is relatively new and its cost tends to increase as additional modules are added. Below is the official description, which already sets high expectations:
+
 > The AI Red Teamer Job Role Path, in collaboration with Google, trains cybersecurity professionals to assess, exploit, and secure AI systems. Covering prompt injection, model privacy attacks, adversarial AI, supply chain risks, and deployment threats, it combines theory with hands-on exercises. Aligned with Google’s Secure AI Framework (SAIF), it ensures relevance to real-world AI security challenges. Learners will gain skills to manipulate model behaviors, develop AI-specific red teaming strategies, and perform offensive security testing against AI-driven applications.
 
 The path consists of 12 different modules, divided into up to 230 sections. In this post, I’ll share my experience module by module. That said, if you’re looking for a high-level overview or want to read about my overall impressions, feel free to jump directly to [My Path Experience](#my-path-experience).
@@ -23,6 +25,7 @@ The path consists of 12 different modules, divided into up to 230 sections. In t
 **Spoiler alert**: in terms of value for money, this path is the best AI Red Teaming resource I’ve found so far. I’ve spent quite some time reviewing and testing different options in an attempt to find solid training (and some form of certification) in this field. Many alternatives are significantly more expensive, and I’m not convinced they deliver equivalent value. On top of that, this path comes from one of the largest and most reputable cybersecurity platforms available online, which makes it an easy recommendation.
 
 ### How much is it?
+
 So, how much does the full career path actually cost? When I started, the projected cost was around **500-ish cubes**. I don’t remember the exact number, but I do know that a **single month of the Gold Plan ($38)** was enough at the time. This plan gives you **500 cubes per month**, which you can use to permanently unlock modules.
 
 Since the path is still fairly new, a couple of additional modules were added along the way, and the total cost increased. Because of that, I ended up needing a **second month of subscription**.
@@ -32,6 +35,7 @@ If you’re planning to complete the entire Job Role Path from the start, I high
 ![HTB Subscriptions](assets/img/posts/ai_rt_htb/htb_subs.png)
 
 #### Cubes system explained
+
 Cubes are used to unlock Modules & Paths.
 You get back Cubes as a reward for Module & Paths completion. It is like cash back, but better!
 The Cubes needed to unlock and reward back depend on the Tier of the Module. Find a table below for reference.
@@ -47,15 +51,60 @@ The Cubes needed to unlock and reward back depend on the Tier of the Module. Fin
 
 If you want to level up your hacking learning, you will definitely need Cubes. You can purchase them in two different ways:
 - You can purchase your desired amount of Cubes.
-- We suggest purchasing a subscription. This will get you a nice discount and also provide the Cubes needed for the level of difficulty you want to get into.   
+- We suggest purchasing a subscription. This will get you a nice discount and also provide the Cubes needed for the level of difficulty you want to get into.
+
 There are 3 subscription levels:
-  - **Silver**: 200 Cubes per month &rarr; 11% discount
-  - **Gold**: 500 cubes per month &rarr; 27% discount
-  - **Platinum**: 1,000 cubes per month &rarr; 36% discount
+- **Silver**: 200 Cubes per month &rarr; 11% discount
+- **Gold**: 500 cubes per month &rarr; 27% discount
+- **Platinum**: 1,000 cubes per month &rarr; 36% discount
+
+## My Docker Setup
+
+Before going all-in with the modules, there are several of them which suggest setting things up locally with Miniconda and JupyterLab. To avoid having a lot of stuff and dependencies installed on my computer, I ran everything in a Docker container.
+
+Here is the Dockerfile I used
+
+```dockerfile
+FROM continuumio/miniconda3
+# Configure Conda channels
+RUN conda config --add channels defaults \
+ && conda config --add channels conda-forge \
+ && conda config --add channels nvidia \
+ && conda config --add channels pytorch \
+ && conda config --set channel_priority strict \
+ && conda config --set auto_activate_base false
+# Create environment and install main packages, Jupyter included
+RUN conda create -y -n ai python=3.11 \
+  && /bin/bash -c "source activate ai && \
+    conda install -y numpy scipy pandas scikit-learn matplotlib seaborn transformers datasets tokenizers accelerate evaluate optimum huggingface_hub nltk category_encoders pydantic bleach tqdm && \
+    conda install -y jupyter jupyterlab notebook ipykernel && \
+    pip install requests requests_toolbelt split-folders safetensors opacus trl profanity-check && \
+    pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu124 --force-reinstall --no-deps"
+# Guardrails AI
+RUN /bin/bash -c "source activate ai && pip install guardrails-ai"
+# MCP client library
+RUN /bin/bash -c "source activate ai && pip install fastmcp"
+# Unsloth - fine-tuning lab (module 12)
+RUN /bin/bash -c "source activate ai && \
+    pip install 'unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git' unsloth_zoo"
+# Expose Jupyter default port
+EXPOSE 8888
+# Launch Jupyter in the 'ai' environment when running the container
+CMD ["bash", "-c", "source activate ai && jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root"]
+```
+
+Build and run:
+
+```bash
+docker build -t htb-ai .
+docker run --name htb-ai --shm-size=2g -p 8888:8888 -v "$(pwd)/jupyter-lab:/notebooks" htb-ai
+```
 
 ## **Modules**
+
 > You might get stuck on some exercises or skills assessments. Feel free to contact me through my socials (you can find them, I trust you), and **I’ll happily help you with getting the flags!** 😄
 {: .prompt-tip }
+
 ### **Fundamentals of AI**
 
 |  Tier  | Difficulty | Category | # of sections | Estimated time |
@@ -67,6 +116,7 @@ There are 3 subscription levels:
 _[Check my Superior Intelligence badge here](https://academy.hackthebox.com/achievement/badge/97cd7fc3-a9cc-11f0-9254-bea50ffe6cb4)_
 
 #### What's this about?
+
 This module is a broad and fairly deep introduction to the core concepts behind Artificial Intelligence, Machine Learning, and Deep Learning. It covers the main learning paradigms (supervised, unsupervised, and reinforcement learning), common algorithms, neural network architectures, and a high-level view of generative AI and large language models.
 
 Within the path, this module exists to give you a solid theoretical foundation so later, more practical topics don’t feel like magic. It’s clearly meant to level the playing field for people who haven’t formally studied AI before.
@@ -102,6 +152,7 @@ If you already have a strong background in AI or ML, this module will likely fee
 _[Check my Synthetic Intelligence badge here](https://academy.hackthebox.com/achievement/badge/662e5d0d-b388-11f0-9254-bea50ffe6cb4)_
 
 #### What's this about?
+
 This module is where things start to get hands-on. It focuses on setting up a functional AI lab and using it to build and train real machine learning models applied to cybersecurity problems. You’re guided through environment setup (Miniconda, JupyterLab), dataset handling, preprocessing, and model training using common Python libraries like Scikit-learn and PyTorch.
 
 Within the path, this module bridges theory and practice. It shows how AI is actually used in InfoSec workflows, taking you from raw data to trained models in realistic security-related scenarios.
@@ -115,7 +166,7 @@ Within the path, this module bridges theory and practice. It shows how AI is act
 
 This is the first module where you actually start doing things. The initial sections walk you step by step through building your own AI lab, so even if you’ve never trained a model before, it’s approachable.
 
-Instead of strictly following the suggested setup, I went with **Docker**. I didn’t want to install all the prerequisites directly on my machine, and getting GPU passthrough working properly in a VirtualBox-based setup is usually more effort than it’s worth. With Docker, a couple of commands were enough to get everything running in a clean, portable environment.
+Instead of strictly following the suggested setup, I went with **Docker**. I didn’t want to install all the prerequisites directly on my machine, and getting GPU passthrough working properly in a VirtualBox-based setup is usually more effort than it’s worth. See [My Docker Setup](#my-docker-setup) above for the Dockerfile and instructions I used throughout the path.
 
 The module walks you through training three different models using publicly available datasets, all tied to cybersecurity use cases. Each one uses a different approach, so you end up touching a bit of everything: data preprocessing, feature engineering, classical ML, and deep learning. It’s well designed and does a good job of reinforcing concepts through repetition without feeling redundant.
 
@@ -123,7 +174,7 @@ One important thing to note: if you’re aiming to earn the badge, you need to c
 
 #### Tips
 
-- Consider using Docker if you don’t want to pollute your local system or deal with GPU passthrough issues
+- Consider using Docker if you don’t want to pollute your local system or deal with GPU passthrough issues, see [My Docker Setup](#my-docker-setup)
 - Training on CPU works, but expect longer runtimes—patience helps here
 - Don’t skip the dataset exploration steps, they’re more important than they initially look
 - Follow the labs closely if your goal is the badge, as some flags depend on full completion
@@ -139,6 +190,7 @@ One important thing to note: if you’re aiming to earn the badge, you need to c
 _[Check my Model Breaker badge here](https://academy.hackthebox.com/achievement/badge/01de7539-b4f4-11f0-9254-bea50ffe6cb4)_
 
 #### What's this about?
+
 This module marks the real beginning of the AI Red Teaming path. It introduces the security perspective around machine learning systems and generative AI, focusing on where things can go wrong and how these systems interact with more traditional application components.
 
 It covers the OWASP Top 10 for ML and the OWASP Top 10 for LLMs, along with a high-level view of how to approach attacking ML-based systems and their individual components. Within the path, this module connects the AI fundamentals you’ve already seen with an attacker mindset.
@@ -174,6 +226,7 @@ It’s not deeply technical or exploit-heavy, but that’s intentional. This mod
 _[Check my Prompt Phantom badge here](https://academy.hackthebox.com/achievement/badge/5a146967-bb40-11f0-9254-bea50ffe6cb4)_
 
 #### What's this about?
+
 This module focuses on one of the most common and relevant attack classes against large language models: prompt injection. It introduces how LLMs can be manipulated purely through input prompts, covering direct prompt injection, indirect prompt injection, and various jailbreaking techniques.
 
 Within the path, this is the first module where you actively interact with LLMs from an attacker’s perspective and start understanding how prompt design can influence, bypass, or completely override intended model behavior.
@@ -209,6 +262,7 @@ One important real-world takeaway is that many modern, industry-grade LLMs (such
 _[Check my Output Overdrive badge here](https://academy.hackthebox.com/achievement/badge/3b82cd0d-bda5-11f0-9254-bea50ffe6cb4)_
 
 #### What's this about?
+
 This module focuses on attacking the output generated by LLMs rather than the prompt itself. The idea is simple but powerful. If an application blindly trusts LLM output and feeds it into other systems, you can often fall back to classic web and application attacks.
 
 Within the path, this module shows how traditional vulnerabilities resurface in AI driven applications when LLM responses are not properly validated or sanitized.
@@ -227,11 +281,13 @@ The module does a great job of showing how easily these issues appear when LLM o
 One of the most interesting sections covers abuse attacks. This goes beyond pure exploitation and looks at how AI systems can be misused for misinformation, hate speech, harassment, and similar scenarios. Mitigations and regulatory considerations are also discussed, which helps ground the attacks in a real world context.
 
 #### Tips
+
 - Think of LLM output as untrusted user input at all times
 - Apply the same mental model you use for web application testing
 - Pay attention to hallucinations, especially when output is used for decision making
 - The abuse attack section is worth reading carefully, even if it feels less technical
 - **Skills Assessment**: You can modify the address of `htb-stdnt` and ask the admin bot to give you shipment information with verbose
+
 ```
 123 Test Site" ;cat flag.txt "
 ```
@@ -247,6 +303,7 @@ One of the most interesting sections covers abuse attacks. This goes beyond pure
 _[Check my Data Distorter badge here](https://academy.hackthebox.com/achievement/badge/5fd7374e-c2e7-11f0-9254-bea50ffe6cb4)_
 
 #### What's this about?
+
 This module shifts the focus from attacking prompts and outputs to attacking the data itself. Since AI systems are entirely data driven, compromising the data pipeline can undermine the entire model. The module explores how training data, features, and even model artifacts can become effective attack vectors.
 
 Within the path, this module goes deeper into the foundations of AI security by showing how attacks can be introduced at the earliest stages of model development and training.
@@ -265,6 +322,7 @@ The content can feel heavy at times. Some sections are quite theoretical and req
 Despite the difficulty, the value is clear. Many real world AI models are trained on publicly available datasets. If an attacker manages to poison those datasets, the resulting model can behave unpredictably or maliciously. These attacks are not trivial to pull off, but understanding them is critical if you want a realistic view of AI security.
 
 #### Tips
+
 - Take this module slowly and do not rush through it
 - Use an LLM as a coding assistant to save time and frustration
 - Focus on understanding the attack logic rather than memorizing details
@@ -281,6 +339,7 @@ Despite the difficulty, the value is clear. Many real world AI models are traine
 _[Check my Protocol Breaker badge here](https://academy.hackthebox.com/achievement/badge/5202770b-cc7f-11f0-9254-bea50ffe6cb4)_
 
 #### What's this about?
+
 This module moves away from attacking models and data and focuses on the surrounding application and system layers of an AI deployment. It shows how weaknesses in these components can completely undermine an otherwise well designed model.
 
 A major part of the module is dedicated to the Model Context Protocol and how MCP servers work, why they exist, and how they can introduce new attack surfaces when improperly implemented or trusted.
@@ -295,9 +354,11 @@ A major part of the module is dedicated to the Model Context Protocol and how MC
 This module is really good and genuinely fun to go through. The focus on real application and system level issues makes everything feel much closer to real world AI deployments. The MCP server sections are especially interesting and highlight how quickly things can go wrong when context and trust boundaries are poorly defined.
 
 The hands on exercises are well designed and force you to think instead of just following obvious paths. The skills assessment is tricky and intentionally sets traps. Going for the low hanging fruit will often fail, and you need to slow down and reason about the full attack surface.
+
 Once everything clicks, the payoff is very satisfying. This module delivers real red teaming value and feels like something you would actually encounter in modern AI enabled applications.
 
 #### Tips
+
 - Do not rush the skills assessment
 - Question every trust boundary and assumption
 - If something looks too easy, it probably is
@@ -314,6 +375,7 @@ Once everything clicks, the payoff is very satisfying. This module delivers real
 _[Check my ModelEvader badge here](https://academy.hackthebox.com/achievement/badge/38ea3b02-ce16-11f0-9254-bea50ffe6cb4)_
 
 #### What's this about?
+
 This module introduces evasion attacks against AI models at inference time. The focus is on how models process untrusted input and how attackers can manipulate that input to bypass detection or influence predictions.
 
 It covers core evasion concepts such as threat models, white box versus black box attacks, transferability, and feature obfuscation techniques like GoodWords. Within the path, this module lays the groundwork for understanding how defensive models can be bypassed without touching training data.
@@ -332,10 +394,11 @@ The hands on exercises are well designed and the skills assessment is enjoyable 
 While it requires solid Python skills and patience, the module provides a strong foundation for understanding how evasion attacks work in real world AI systems.
 
 #### Tips
+
 - Expect a slower pace and take breaks when needed
 - Use an LLM to help with implementation details
 - Focus on understanding the evasion logic rather than perfect code
-- Running the labs on your own machine is strongly recommended
+- Running the labs on your own machine is strongly recommended, see [My Docker Setup](#my-docker-setup)
 
 ### **AI Evasion - First-Order Attacks**
 
@@ -348,6 +411,7 @@ While it requires solid Python skills and patience, the module provides a strong
 _[Check my GradientGhost badge here](https://academy.hackthebox.com/achievement/badge/65453c30-d79e-11f0-9254-bea50ffe6cb4)_
 
 #### What's this about?
+
 This module focuses on gradient based evasion attacks against neural network classifiers. It explains how small, carefully crafted input perturbations can exploit a model’s differentiable structure and force misclassifications at inference time.
 
 The module covers foundational concepts behind these attacks and dives into well known techniques such as FGSM, iterative FGSM, and DeepFool. Within the path, this module goes deeper into the mathematical side of AI evasion and shows why gradient trained models are inherently fragile.
@@ -366,10 +430,11 @@ It took me a long time to start understanding some of the core concepts, and eve
 For people with a strong background in mathematics and neural networks, this module can be excellent. For others, it may feel overwhelming. My rating reflects personal experience rather than content quality.
 
 #### Tips
+
 - Do not underestimate the math requirements
 - Use an LLM to simplify explanations and assist with code
 - Focus on the intuition behind each attack rather than the equations
-- Running everything on your own machine makes experimentation easier
+- Running everything on your own machine makes experimentation easier, see [My Docker Setup](#my-docker-setup)
 
 ### **AI Evasion - Sparsity Attacks**
 
@@ -382,6 +447,7 @@ For people with a strong background in mathematics and neural networks, this mod
 _[Check my PixelSniper badge here](https://academy.hackthebox.com/achievement/badge/b7b7c362-d9f7-11f0-9254-bea50ffe6cb4)_
 
 #### What's this about?
+
 This module explores sparsity attacks, where adversarial perturbations are concentrated on a few carefully selected features rather than spread across all inputs. It introduces techniques for generating effective adversarial examples while modifying as few input dimensions as possible.
 
 Within the path, this module builds on the first-order evasion attacks and dives deeper into mathematical optimization approaches used to constrain perturbations under strict sparsity budgets.
@@ -398,10 +464,11 @@ This module was very challenging for me. Like the previous first-order evasion m
 For someone with a cybersecurity rather than a mathematical background, this module is tough. I was mentally drained from previous modules and struggled to enjoy the material. That said, for readers who enjoy deep math and optimization, it could be a fascinating exploration of advanced adversarial techniques.
 
 #### Tips
+
 - Approach slowly and expect heavy math
 - Using an LLM to assist with explanations or code may help
 - Focus on intuition over full derivations if your goal is practical AI red teaming
-- Run labs on your own machine for faster experimentation
+- Run labs on your own machine for faster experimentation, see [My Docker Setup](#my-docker-setup)
 
 ### **AI Privacy**
 
@@ -414,6 +481,7 @@ For someone with a cybersecurity rather than a mathematical background, this mod
 _[Check my ShadowGuard badge here](https://academy.hackthebox.com/achievement/badge/0df755e5-dec0-11f0-9254-bea50ffe6cb4)_
 
 #### What's this about?
+
 This module focuses on privacy risks in machine learning systems, specifically how models trained on sensitive data can unintentionally leak information about individuals in their training set. The main attack covered is membership inference, which exploits differences in how models behave on seen versus unseen data.
 
 Within the path, this module introduces a more defensive angle. It explores both how privacy attacks work and how techniques like differential privacy can be used to mitigate them.
@@ -432,7 +500,8 @@ The concepts are heavy and not easy to grasp, especially if you do not already h
 By the time you reach this module, you are already deeply invested in the path, so quitting is not really an option. You push through it because you have to, not because it is enjoyable. For me, this was the weakest module of the entire path.
 
 #### Tips
-- Run everything on your own machine, Pwnbox is not a good option here
+
+- Run everything on your own machine, Pwnbox is not a good option here, see [My Docker Setup](#my-docker-setup)
 - Expect long training times and plan accordingly
 - Focus on understanding the high level ideas rather than every detail
 - Be patient with the skills assessment, it is more about persistence than creativity
@@ -448,6 +517,7 @@ By the time you reach this module, you are already deeply invested in the path, 
 _[Check my AI Shield badge here](https://academy.hackthebox.com/achievement/badge/f1dd6619-e4c5-11f0-9254-bea50ffe6cb4)_
 
 #### What's this about?
+
 This module focuses on defensive strategies for AI systems. It covers techniques to mitigate attacks like evasion, data manipulation, and prompt injection. You learn both model-level defenses, such as adversarial training and tuning, and application-level protections like LLM guardrails.
 
 Within the path, this module provides a practical understanding of how AI systems are protected in the real world and rounds out the offensive modules with defensive perspectives.
@@ -466,6 +536,7 @@ The skills assessment can be a bit frustrating. I could not complete it as quick
 Overall, this module is a strong conclusion to the path. It helps you understand how AI systems are secured in practice and provides a satisfying bridge between attacking AI and defending it.
 
 #### Tips
+
 - Focus on understanding the concepts rather than running all code snippets
 - Powerful hardware helps if you want to experiment with adversarial training
 - Take your time with exercises, the value comes from understanding not speed
@@ -490,13 +561,17 @@ In the end, I would absolutely recommend this path to penetration testers and se
 ![AI Ninja](assets/img/posts/ai_rt_htb/ai_ninja.png){: w="350px" }
 _[Check my AI Ninja badge here](https://academy.hackthebox.com/achievement/badge/f1dfcf2f-e4c5-11f0-9254-bea50ffe6cb4)_
 
+Since finishing this path, HTB has launched the Certified Offensive AI Expert (COAE) certification, the natural next step for anyone who completes this Job Role Path. I'm currently working through the COAE labs and prepping for the exam. I'll publish a dedicated write-up once I've gone through it, covering the exam format, my approach, and whether it's worth it on top of this path.
+
 ## References
+
 - Help from [HTB's Discord](https://discord.com/invite/hackthebox)
 - Help from my colleague [Diogo Lino](https://www.linkedin.com/in/lino-diogo/)
 - AI (Perplexity, ChatGPT, local AI models, etc.)
 
 <br>
-> Wanna talk? Contact me here!  
+
+> Wanna talk? Contact me here!
 > <a href="javascript:void(0);" style="font-size:1.2rem; margin-right:0.8rem; margin-top:1rem;" onclick="navigator.clipboard.writeText('diegofdlg@gmail.com');alert('Mail copied to the clipboard!')"><i class="fa-solid fa-envelope"></i></a>
 > <a href="https://www.linkedin.com/in/diego-fidalgo" style="font-size:1.2rem; margin-right:0.8rem; margin-top:1rem;" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
 > <a href="https://x.com/0x_ch3ngo" style="font-size:1.2rem; margin-right:0.8rem; margin-top:1rem;" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>

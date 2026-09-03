@@ -1,8 +1,8 @@
 ---
-# the default layout is 'page'
 icon: fas fa-info-circle
 order: 5
 title: About Me
+permalink: /about/
 ---
 
 > English is not my first language! So please be gentle 😄  
