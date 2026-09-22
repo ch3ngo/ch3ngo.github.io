@@ -11,7 +11,7 @@ image:
 ---
 
 
-> **Update**: This post was originally written December 2025, before HTB launched the Certified Offensive AI Expert (COAE) certification. I'm now preparing for the COAE exam, using this same path/notes as groundwork. Once I sit it, I'll publish a separate post covering my process, prep approach, and thoughts on the exam itself.
+> **Update**: This post was originally written December 2025, before HTB launched the Certified Offensive AI Expert (COAE) certification. I have now done the COAE exam, using this same path/notes as groundwork. I'll publish a separate post covering my process, prep approach, and thoughts on the exam itself as soon as I have the results back.
 {: .prompt-warning }
 
 ## **Introduction**
@@ -286,7 +286,6 @@ One of the most interesting sections covers abuse attacks. This goes beyond pure
 - Apply the same mental model you use for web application testing
 - Pay attention to hallucinations, especially when output is used for decision making
 - The abuse attack section is worth reading carefully, even if it feels less technical
-- **Skills Assessment**: You can modify the address of `htb-stdnt` and ask the admin bot to give you shipment information with verbose
 
 ```
 123 Test Site" ;cat flag.txt "
